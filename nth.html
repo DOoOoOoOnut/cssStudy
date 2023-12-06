@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수열선택자</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .box {}
+        .box h1 {background-color: blueviolet;}
+        .box p:nth-child(2) {background-color: aqua;}
+        .box p:nth-child(3) {background-color: tomato;}
+        .box p:nth-child(4) {background-color: darkgoldenrod;}
+        /* 타입 */
+        .box p:nth-of-type(1) {border: 2px solid #000;}
+        .box p:nth-of-type(2) {border: 10px dotted #993030}
+        .box p:nth-of-type(3) {border: 15px solid #6b08bd}
+        /* first & last */
+        .box h1:first-child {color: blue;}
+        .box p:last-child {color: #fff;}
+        /* 뒤에서부터 카운트 */
+        .box p:nth-last-child(2) {font-size: 2rem;}
+        ul {}
+        ul li {
+            border: 1px solid #555;
+            width: 200px; height: 200px;
+            display: inline-block;
+        }
+        ul li:first-child {border-width: 5px;}
+        ul li:nth-last-child(4) {border-color: red;}
+        ul li:nth-child(even) {background:#eee;}
+        /* ul li:nth-child(odd) {} */
+        ul li:nth-child(4n+2) {background: rgb(255,172,115);
+background: radial-gradient(circle, rgba(255,172,115,1) 0%, rgba(234,175,139,1) 0%, rgba(148,187,233,1) 67%);}
+        /* ul li:nth-child(3n) {width: 100px;} */
+        /* ul li:nth-child(11n) {background-color: aquamarine;} */
+        /* ul li:nth-child(3n+2) {width: 300px;} */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>제목</h1>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+    </div>
+    <hr>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
