@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float-1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .box {
+            background-color: black;
+            /* height: 150px; */
+            overflow: hidden;
+        }
+        .box p {
+            width: 150px; height: 150px;
+            font-size: 5rem;
+        }
+        .box .b1 {}
+        .box .b2 {
+            float: right;
+        }
+        .box > .b1 p:nth-child(1) {
+            background-color: blueviolet;
+            float: left;
+        }
+        .box >.b1 p:nth-child(2) {
+            background-color:khaki;
+            float: left;
+        }
+        .box .b2 p:nth-last-child(2) {
+            background-color: darkmagenta;
+            float: left;
+        }
+        .box .b2 p:last-child {
+            background-color: darksalmon;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="b1">
+            <p>A</p>
+            <p>B</p>
+        </div>
+        <div class="b2">
+            <p>C</p>
+            <p>D</p>
+        </div>
+    </div>
+</body>
+</html>
