@@ -9,8 +9,9 @@ header,main,footer,nav,section,article,figure,figcaption,aside,
 address,details,mark,time,img,summary,iframe,div {
     margin: 0; padding: 0;
     font-size: 1.0rem; font-style: normal; font-weight: normal;
-    line-height: 1.2; color: #000;
+    line-height: 1.2; color: #333;
     text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 /* 목록 태그의 스타일 지우기 */
 ul,ol,li {list-style: none;}
