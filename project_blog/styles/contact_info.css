@@ -1,0 +1,30 @@
+/* contact_info.html 전용 css */
+main {}
+main h1 {}
+main h2 {}
+main .fee {
+    background-color: bisque;
+    width: 85%;
+    margin: 50px auto 0;
+    /* 좌우에 auto를 입력하면 남은 값 계산해 자동으로 가운데 배치됨 */
+    text-align: center;
+}
+main .fee th:nth-child(1) {
+    border-right: 1px solid #333;
+}
+main .fee thead {
+    border-bottom: 2px solid #333;
+}
+main .fee thead tr {}
+main .fee thead tr th {padding: 15px;}
+main .fee thead tr th:nth-child(1) {width: 120px;}
+/* main .fee thead tr th:nth-child(2) {width: 300px;} */
+/* main .fee thead tr th:nth-child(3) {width: 300px;} */
+/* 표의 가장 작은 요소 기준으로 크기 체크 */
+main .fee tbody {
+    background-color: blanchedalmond;
+}
+main .fee tbody tr {}
+main .fee tbody tr th {
+}
+main .fee tbody tr td {padding: 15px;}

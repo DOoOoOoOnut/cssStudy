@@ -1,25 +1,4 @@
-/* 헤더 */
-.all {}
-.all header {
-    text-align: center;
-    height: 200px;
-}
-.all header h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-size: 4rem;
-    font-style: italic;
-    padding: 50px 50px;
-}
-.all header .snb {
-    text-align: right;
-    padding: 10px 30px;
-    
-}
-.all header .snb a {
-    margin-left: 20px;
-    font-size: 1.1rem;
-}
+/* index.html main 전용 */
 /* 메인 */
 .all main {
     text-align: center;
@@ -44,31 +23,3 @@
 .all main .contents .intro {
     margin-top: 100px;
 }
-.all main .contact {
-    padding: 20px;
-    line-height: 1.7;
-}
-.all main .contact h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-size: 3rem;
-}
-.all main .contact p {
-    line-height: 1.4;
-    font-size: 1.2rem;
-}
-.all main .contact .btm {
-    padding-top: 20px;
-    font-weight: 500;
-}
-/* 푸터 */
-.all footer {
-    padding: 30px 0 50px;
-    border-top:1px solid #e1e1e1;
-    margin-top: 50px;
-}
-.all footer p {
-    text-align: center;
-    line-height: 1.7;
-    color: #505050;
-} 

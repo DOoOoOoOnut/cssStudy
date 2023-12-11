@@ -48,3 +48,19 @@
 6. 특정 item 만 교차축을 다르게 설정하고 싶다면? 자식(item)에게 `align-self:값`
 7. (선택) item의 태그순서와 다르게 화면에서 보이는 순서를 다르게 하고 싶다면? `order:값` 
 8. (선택) item의 너비값을 전체 부모 기준으로 일정하게 설정하고 싶다면? `flex:값`
+----
+# project_blog 23/12/08
+## title: jisha 포트폴리오 사이트
+* index.html(main)
+* character_design.html (캐릭터 디자인)
+* cover_scketch.html (표지작업)
+* drawing.html (드로잉)
+* fan_art.html (팬아트)
+* contact_info.html (컨택,안내사항)
+*모든 html은 서로 '뒤로/앞으로' 기능 없이 이동할 수 있어야 한다.
+----
+## 공통영역 HTML, CSS
+* 모든 html 공통으로 존재해야하는 HTML => Header, Main(내용제거), Footer
+* css 공통영역 => reset, common.css(Header, main(내용제거), footer)
+* css 개별영역 => main의 내용영역
+* 공통 css들이 먼저 연결되고, 개별 css 파일이 아래에 링크되어 있어야 한다.
