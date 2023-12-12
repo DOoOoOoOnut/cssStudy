@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pst1.html</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        #all {
+            background-color: rgb(0, 0, 0);
+            width: 500px; height: 500px; padding: 20px; margin: 20px;
+            /* absolute의 부모에게 잡기 명령 설정하기 = 다른 position 중 적합한 대상 입력하기 */
+            /* 필수 후보 모두 가능하지만 일반적으로 relative를 가장 많이 사용한다 (위치 고정이 가능하기 때문) */
+            position: relative;
+        }
+        #all .box {
+            width: 100px; line-height: 100px; text-align: center; font-size: 3rem;
+        }
+        #all .a {
+            background-color:rgb(196, 236, 196);
+        }
+        #all .b {
+            background-color: rgb(224, 188, 140);
+            /* position: relative; left: 100px; top: 50px; */
+            /* relative 
+                    -> 본인 위치 기준으로 자기 위치를 기억한 채로 움직이는 속성 
+                    위치 이동할 때도 원래 위치 기준으로 떨어짐
+            */
+            position: absolute; right: 0;
+            /* absolute -> 자기 위치 없이 자유롭게 이동하는 속성 / 잡은 위치(부모) 기준으로 움직이기 가능*/
+        }
+        #all .c {
+            background-color: rgb(243, 236, 133);
+        }
+        /* nav + position */
+        /* 공통 */
+        header {
+            background-color: aqua;
+            /* width: 1134px; margin: 0 auto; */
+            width: calc(100% - 30px); margin: 0 auto;
+            height: 110px;
+        }
+        header .top {
+            display: flex; flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            /* 높이값을 주지 않으면 전체 크기가 내용 크기만큼만 있기 때문에 정렬이 적용되지 않는다.
+            -> 높이를 준다!  */
+            height: 100%;
+            /* 자식 크기는 부모가 바뀌어도 따라가도록 %로 쓰는 것이 좋다. */
+        }
+        header .top h1 {
+            background-color: cornflowerblue;
+            width: 120px; height: 80px;
+        }
+        header .top nav {}
+        header .top nav .gnb {
+            /* li 형제 두개를 옆으로 정렬하고 싶다 -> 정렬 -> flex */
+            /* flex가 필요하면 누구한테 준다? 정렬대상의 부모 "gnb" */
+            display: flex; flex-flow: row nowrap;
+            align-items: center;
+        }
+        header .top nav .gnb > li {
+            /* margin-right: 10px; */
+            /* 서브 lnb의 absolute 부모 기준 */
+            position: relative;
+        }
+        header .top nav .gnb > li > a {
+            background-color: chartreuse;
+            padding: 10px 30px;
+            /* padding 적용 후 생성된 문제점 : 겹침현상 */
+            /* 위 문제는 누구때문? a가 인라인이기 때문 */
+            /* 해결하려면? 부모에게 flex를 줘야하는가 a에게 block을 줘야하는가 */
+            /* 부모에 flex를 준다는 뜻은? 부모 안 자식들의 정렬방향 및 방법 정하기 */
+            /* a에 block준다는 뜻은? 인라인을 블록으로 변경하는 속성 변경 */
+            display: block;}
+        header .top nav .gnb > li:nth-child(1) {}
+        /* header .top nav .gnb > li:nth-child(2) {margin-right: 0;} */
+        header .top nav .gnb > li .lnb {
+            background-color: azure;
+            position: absolute; left: 0; width: 100%;
+        }
+        header .top nav .gnb > li .lnb li {}
+        header .top nav .gnb > li .lnb li:nth-child(1) {}
+        header .top nav .gnb > li .lnb li:nth-child(2) {}
+        header .top nav .gnb > li .lnb li a {}
+        /* GUESS */ 
+        #guess {
+            background-color: aquamarine;
+            width: calc(100% - 32px); height: 110px; margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+        #guess h1 {
+            background-color: blue;
+            width: 100px; height: 60px;
+            margin-right: 45px;
+        }
+        #guess nav {}
+        #guess nav .gnb {
+            display: flex;
+            align-items: center;
+            
+        }
+        #guess nav .gnb > li {
+            position: relative;
+        }
+        #guess nav .gnb > li > a {
+            background-color: blanchedalmond;
+            width: 130px; padding: 7px 0;
+            display: block;
+            text-align: center;
+        }
+        #guess nav .gnb > li:nth-child(1) {}
+        #guess nav .gnb > li:nth-child(2) {}
+        #guess nav .gnb > li .lnb {
+            display: flex;
+            position: absolute; left: 0; width: max-content;/* 최대크기 */
+            /* absolute 적용대상은 width값을 반드시 함께 입력해야한다!! */
+            /* 보통 부모 대상의 100%로 width:100% 라고 입력하거나.. */
+            /* 부모 기준이 아닌 자식 기준일 경우 자식의 갯수가 항상 고정이 아니고 유동적일 경우 자동으로 맞춰질 수 있도록 자식의 최대 크기 기준으로 max-contents 라고 입력한다. */
+        }
+        #guess nav .gnb > li .lnb li {}
+        #guess nav .gnb > li .lnb li > a {
+            background-color: cornsilk;
+            padding: 10px 30px;
+            display: block;
+        }
+        #guess nav .gnb > li .lnb li:nth-child(1) {
+        }
+        #guess nav .gnb > li .lnb li:nth-child(2) {}
+        #guess nav .gnb > li .lnb li:nth-child(3) {}
+        /* 8분 50초 */
+        /* 
+        < 레이아웃 짤때~ >
+        1. 선택자 정확한지 시작하기 전에 미리 확실하게 확인하기 (중복되는 자손 있으면 > 잊지말기 제발!!)
+        2. 가장 큰 영역에 백그라운드 주고 필요한 크기 설정하기 (반응형은 calc 활용~ ex> 100% - 30px)
+        3. 중요 영역에 백그라운드 넣으며 크기 설정해주기 (큰 영역에서 작은 영역 순서로 들어가면서)
+        4. flex로 요소의 정렬 맞춰주기
+        5. 마진, 텍스트정렬 등 부분적으로 필요한 속성 넣어주기
+        */
+    </style>
+</head>
+<body>
+    <div id="all">
+        <p class="box a">A</p>
+        <p class="box b">B</p>
+        <p class="box c">C</p>
+    </div>
+    <hr>
+    <header>
+        <div class="top">
+            <h1>로고</h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">메인메뉴1</a>
+                        <ul class="lnb">
+                            <li><a href="#">메뉴1-서브1</a></li>
+                            <li><a href="#">메뉴1-서브2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메인메뉴2</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <hr>
+    <div id="guess">
+        <h1>GUESS</h1>
+        <nav>
+            <ul class="gnb">
+                <li><a href="#">여성</a></li>
+                <li><a href="#">남성</a>
+                    <ul class="lnb">
+                        <li><a href="#">아우터</a></li>
+                        <li><a href="#">티셔츠</a></li>
+                        <li><a href="#">셔츠</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
