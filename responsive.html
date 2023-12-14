@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형과 적응형</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* max-width 큰 값 -> 작은 값 개발 */
+        body, html {background-color: blueviolet;}
+        /* media 조건 max 또는 min 작성 시 ;는 작성 안함 */
+        @media screen and (max-width:1200px){ /* 961~1200 */
+            body, html {background-color: crimson;}
+        } /* 화면 너비가 1200 이하일 떄 */
+        @media screen and (max-width:960px) {/* 761~960 */
+            body, html {background-color:burlywood}
+        } /* 화면 너비가 960 이하일 때 */
+        @media screen and (max-width:760px){/* 481~760 */
+            body, html {background-color: cyan;}
+        }/* 화면 너비가 760 이하일 때 */
+        @media screen and (max-width:480px){ /* 321~480 */
+            body, html {background-color: coral;}
+        } /* 화면 너비가 480 이하일 때 */
+        @media screen and (max-width:320px){ /* min~320 */
+            body, html {background-color: darkkhaki;}
+        } /* 원래 최소값이라 쓰지 않음(320이하로 볼 일이 없기 때문에) */
+        /* 큰 값~작은값 순서로 써 줘야 정상적으로 출력된다. */
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
