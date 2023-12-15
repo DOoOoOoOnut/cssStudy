@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation-1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        ul {}
+        ul li {}
+        ul li .btn1 {
+            background-color: rgb(238, 213, 179); padding: 30px;
+            font-size: 1rem;
+            /* transition: background-color 2s; 
+            transition: font-size 3s;
+            transition: padding 1s;  */
+            transition:all 2s 0.3s; 
+        }
+        ul li .btn1:hover {
+            background-color:rgb(219, 181, 131);
+            padding: 60px;
+            font-size: 2rem;
+            /* transition: font-size 3s;
+            transition: padding 1s; */
+        }
+        /* --------transform */
+        .box {
+            width: 100px; height: 100px; 
+            background-color: tomato;
+            margin: 10px;
+        }
+        .box1 {transform: scaleX(2); transform-origin: left top;} /* transform은 자식, 자손까지 영향을 줌 */
+        .box2 {transform: rotate(-60deg);}
+        .box3 {transform: skewY(20deg);}
+        .box4 {
+            /* transform: translate(100px, 50px); */
+            transform: translateX(200px);
+            /* position: relative; left: 100px; top: 50px; *//* realactive 대신 가능 */
+        } 
+        .box5 {transform: scale(1.2) rotate(10deg) translate(50px);}
+        .box6 {
+            transform: scale(5) rotate(45deg) skew(20deg) translate(100px, -10px);
+            transform-origin: right top;
+        }
+        .box6:hover {transform: scale(0.5);}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><button type="button" class="btn1">button</button></li>
+        <li><div class="box box1">A</div></li>
+        <li><div class="box box2">B</div></li>
+        <li><div class="box box3">C</div></li>
+        <li><div class="box box4">D</div></li>
+        <li><div class="box box5">E</div></li>
+        <li><div class="box box6">F</div></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
