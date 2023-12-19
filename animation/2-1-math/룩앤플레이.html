@@ -23,32 +23,41 @@
         main #visual #deco {position:relative; width:1200px; margin:0 auto;}
         main #visual #deco .obj {position:absolute;}
 
-        main #visual #deco .obj1 {
+        main #visual #deco .obj1 {/* 후광 */
             top:170px; left:50%; margin-left:-342px;
+            animation: rotate 10s linear alternate infinite;
         }
-        main #visual #deco .obj2 {
+        main #visual #deco .obj2 {/* 반짝1 */
             left:0; top:150px;
+            animation: scale 1s linear alternate infinite;
         }
-        main #visual #deco .obj3 {
+        main #visual #deco .obj3 {/* 석탑 */
             left:100px; top:250px;
+            animation: rotate 2s linear alternate infinite;
         }
-        main #visual #deco .obj4 {
+        main #visual #deco .obj4 {/* 반짝2 */
             left:150px; top:350px;
+            animation: scale 1s linear alternate infinite;
         }
-        main #visual #deco .obj5 {
+        main #visual #deco .obj5 {/* 경복궁 */
             right:0; top:150px;
+            animation: rotate 2s linear alternate-reverse infinite;
         }
-        main #visual #deco .obj6 {
+        main #visual #deco .obj6 {/* 돌하르방 */
             right:200px; top:250px;
+            animation: rotate 2s linear alternate infinite;
         }
-        main #visual #deco .obj7 {
+        main #visual #deco .obj7 {/* 반짝3 */
             right:200px; top:240px;
+            animation: scale 1s linear alternate infinite;
         }
-        main #visual #deco .obj8 {
+        main #visual #deco .obj8 {/* 숭례문 */
             left:270px; top:440px;
+            animation: rotate 2s linear alternate-reverse infinite;
         }
-        main #visual #deco .obj9 {
+        main #visual #deco .obj9 {/* 반짝4 */
             right:0; top:440px;
+            animation: scale 1s linear alternate infinite;
         }
 
         main #book_center {
@@ -69,7 +78,14 @@
         main .category a.active {background:#26bad7; color:#fff;}
 
         /* 애니메이션 */
-
+        @keyframes rotate {
+            0% {transform: rotate(0);}
+            100% {transform: rotate(30deg);}
+        }
+        @keyframes scale {
+            0% {transform: scale(1);}
+            100% {transform: scale(1.2);}
+        }
     </style>
 </head>
 <body>
