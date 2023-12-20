@@ -1,0 +1,17 @@
+@keyframes rotate {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes go {
+    0% {background-position-x: 0;}
+    100% {background-position-x: 1000px;}
+}
+
+main .car #left_tire {
+    animation: rotate 1s linear infinite;
+}
+main .car #right_tire {
+    animation: rotate 1s linear infinite;
+}
+main .bg_wrap .bg2 {}
+main .bg_wrap .bg3 {}
