@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        #list {
+            width: 800px; margin: 50px auto 0;
+            display: flex;
+        }
+        #list li {display: flex; flex-flow: column nowrap;}
+        #list li:first-child {margin-right: 20px;}
+        #list li img {width: 100%;}
+        #list li a {
+            background-color: aquamarine;
+            display: -webkit-box; /* line, box orient 필수보조속성 */
+            display: -moz-box; /* line, box orient 필수보조속성 */
+            display: -o-box; /* line, box orient 필수보조속성 */
+            -webkit-line-clamp: 3; /* 한번에 보이는 줄 수 */
+            -moz-line-clamp: 3; /* 한번에 보이는 줄 수 */
+            -o-line-clamp: 3; /* 한번에 보이는 줄 수 */
+            -webkit-box-orient: vertical; /* horizontal */
+            -moz-box-orient: vertical; /* horizontal */
+            -o-box-orient: vertical; /* horizontal */
+            overflow: hidden; /* 해당 영역 안에서만 보이게 하는 추가 옵션 기능 */
+        }
+        #list li span {padding-top: 50px;}
+        /* 
+            CSS 3 크로스브라우징 - 안정성을 올려주는 브라우저 엔진 명령 별도 설정 必
+            속성 앞에 브라우저에서 올바르게 실행되기 위한 엔진 작성
+            <브라우저 엔진 명령어>
+            - webkit - 크롬, 사파리
+            - moz - 파이어폭스
+            - o 오페라 
+        */
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li>
+            <img src="https://images.unsplash.com/photo-1608875761345-cd40a7ea6034?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <a href="#">
+                12월 25일은 크리스마스 공휴일입니다<br>메리크리스마스~~~!~!
+                12월 25일은 크리스마스 공휴일입니다 메리크리스마스~~~!~!
+                12월 25일은 크리스마스 공휴일입니다 메리크리스마스~~~!~!
+                12월 25일은 크리스마스 공휴일입니다 메리크리스마스~~~!~!
+                12월 25일은 크리스마스 공휴일입니다 메리크리스마스~~~!~!
+                12월 25일은 크리스마스 공휴일입니다 메리크리스마스~~~!~!
+            </a>
+            <span>20,000원</span>
+        </li>
+        <li>
+            <img src="https://images.unsplash.com/photo-1608875761345-cd40a7ea6034?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <a href="#">
+                12월 25일은 크리스마스 공휴일입니다<br>메리크리스마스~~~!~!
+                12월 25일은 크리스마스 공휴일입니다 메리크리스마스~~~!~!
+                12월 25일은 크리스마스 공휴일입니다 메리크리스마스~~~!~!
+                12월 25일은 크리스마스 공휴일입니다 메리크리스마스~~~!~!
+                12월 25일은 크리스마스 공휴일입니다 메리크리스마스~~~!~!
+                12월 25일은 크리스마스 공휴일입니다 메리크리스마스~~~!~!
+            </a>
+            <span>20,000원</span>
+        </li>
+    </ul>
+</body>
+</html>

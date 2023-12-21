@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5502/grid3.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid &amp; pinterest</title>
+    <style>
+        .container {
+            max-width: 1200px; margin: 100px auto;
+            background: #555; 
+            display: grid;
+            grid-template-areas: 
+                'item1 item2 item3'
+                'item4 item5 item6'
+                'item7 item8 item9'
+            ;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3,250px);
+        }
+        .container .item {
+            text-align: center; background-color: #eee;
+            border-radius: 15px; margin: 10px;
+            position: relative;
+        }
+        .container .item1 {grid-area: item1;}
+        .container .item2 {grid-area: item2; height: 350px;}
+        .container .item3  {grid-area: item3;}
+        .container .item4  {grid-area: item4;}
+        .container .item5  {grid-area: item5; top:120px;}
+        .container .item6  {grid-area: item6;}
+        .container .item7  {grid-area: item7;}
+        .container .item8  {grid-area: item8; top: 120px;}
+        .container .item9  {grid-area: item9;}
+
+        @media screen and (max-width:1000px) {
+            .container .item8 {top: auto;}
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

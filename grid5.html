@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-5</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        main {
+            display: grid; justify-content: space-between;
+            grid-template-areas:
+                'item1 item2 item3'
+                'item4 item5 item6'
+            ;
+            /* grid-template-columns: repeat(6,45%); */
+            max-width: 1200px; margin: 0 auto;
+            grid-template-columns: repeat(3,calc(100% / 3 - 10px)); 
+            /* background-color: aqua; */
+        }
+        /* main a {margin-right: 15px;} */
+        /* main a:nth-child(3n) {margin:0;} */
+        /* main a:nth-child(odd) {margin-right: 15px;} */
+        main a .photo {height:200px; overflow: hidden; position: relative; margin-bottom: 20px;}
+        main a .photo img {position: absolute; bottom:-260%; right: -260px;}
+        main a h2 {
+            font-size: 1.2rem; font-weight: 800;
+            line-height: 1.5; border-bottom: 1px solid #ddd;
+            padding: 0 0 10px; margin: 0 0 10px;
+        }
+        main a h2+p {margin: 0 0 30px;}
+        main a .price {
+            font-size: 1.1rem; font-weight: 800; padding: 0 0 20px;
+        }
+        /* grid-item */
+        main .item1 {grid-area:item1;}
+        main .item2 {grid-area:item2;}
+        main .item3 {grid-area:item3;}
+        main .item4 {grid-area:item4;}
+        main .item5 {grid-area:item5;}
+        main .item6 {grid-area:item6;}
+    </style>
+</head>
+<body>
+    <main>
+        <a href="#" class="item1">
+            <p class="photo"><img src="https://images.unsplash.com/photo-1575558418313-edfa02db4206?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></p>
+            <h2>크리스마스 선물🎁</h2>
+            <p>행복한 크리스마스 선물 고양이와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+        <a href="#" class="item2">
+            <p class="photo"><img src="https://images.unsplash.com/photo-1575558418313-edfa02db4206?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></p>
+            <h2>크리스마스 선물🎁</h2>
+            <p>행복한 크리스마스 선물 고양이와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+        <a href="#" class="item3">
+            <p class="photo"><img src="https://images.unsplash.com/photo-1575558418313-edfa02db4206?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></p>
+            <h2>크리스마스 선물🎁</h2>
+            <p>행복한 크리스마스 선물 고양이와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+        <a href="#" class="item4">
+            <p class="photo"><img src="https://images.unsplash.com/photo-1575558418313-edfa02db4206?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></p>
+            <h2>크리스마스 선물🎁</h2>
+            <p>행복한 크리스마스 선물 고양이와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+        <a href="#" class="item5">
+            <p class="photo"><img src="https://images.unsplash.com/photo-1575558418313-edfa02db4206?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></p>
+            <h2>크리스마스 선물🎁</h2>
+            <p>행복한 크리스마스 선물 고양이와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+        <a href="#" class="item6">
+            <p class="photo"><img src="https://images.unsplash.com/photo-1575558418313-edfa02db4206?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></p>
+            <h2>크리스마스 선물🎁</h2>
+            <p>행복한 크리스마스 선물 고양이와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+    </main>
+</body>
+</html>
